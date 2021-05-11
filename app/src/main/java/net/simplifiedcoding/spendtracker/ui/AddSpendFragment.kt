@@ -41,6 +41,7 @@ class AddSpendFragment : BaseFragment(R.layout.fragment_add_spend) {
     @SuppressLint("SetTextI18n")
     private fun addSpend() {
         viewModel.addSpend(amount, description)
-        findNavController().navigateUp()
+        binding.textViewSuccessMessage.text = "Spend Added"
+        //findNavController().navigateUp()
     }
 }
