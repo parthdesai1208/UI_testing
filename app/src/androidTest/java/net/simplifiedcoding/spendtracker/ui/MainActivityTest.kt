@@ -16,6 +16,8 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 
+//Large tests should be focused on testing all application components
+//use of all resources such as databases, file systems and network
 @LargeTest
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest{
@@ -27,7 +29,9 @@ class MainActivityTest{
 
     @Before
     fun setup(){
+        //for launching activity
         scenario = launchActivity()
+        ////for testing fragment in RESUMED state
         scenario.moveToState(Lifecycle.State.RESUMED)
     }
 
